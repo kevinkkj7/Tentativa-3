@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>Meu Aniversário de Namoro</title>
+
+    <style>
+
+      body {
+
+        background-color: pink;
+
+      }
+
+      #heart {
+
+        width: 100px;
+
+        height: 100px;
+
+        background-image: url('heart.png');
+
+        background-size: cover;
+
+        background-repeat: no-repeat;
+
+        margin: 0 auto;
+
+      }
+
+      button {
+
+        background-color: white;
+
+        color: black;
+
+        padding: 10px;
+
+        border: none;
+
+        margin: 10px;
+
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div id="heart"></div>
+
+    <h1>Você me ama?</h1>
+
+    <button id="yes">Sim</button>
+
+    <button id="no">Não</button>
+
+    <script>
+
+      var noButton = document.getElementById("no");
+
+      noButton.addEventListener("click", function() {
+
+        var x = Math.floor(Math.random() * window.innerWidth);
+
+        var y = Math.floor(Math.random() * window.innerHeight);
+
+        noButton.style.position = "absolute";
+
+        noButton.style.left = x + "px";
+
+        noButton.style.top = y + "px";
+
+      });
+
+      var yesButton = document.getElementById("yes");
+
+      yesButton.addEventListener("click", function() {
+
+        alert("Eu também te amo!");
+
+      });
+
+    </script>
+
+  </body>
+
+</html>
