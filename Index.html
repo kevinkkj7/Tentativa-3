@@ -15,10 +15,17 @@
     .imagem-centro {
       display: block;
       margin: 0 auto;
+      max-width: 100%; /* Limita a largura máxima para o tamanho do texto */
+    }
+
+    .imagem-pequena {
+      width: auto;
+      max-width: 100%; /* Limita a largura máxima para o tamanho do texto */
+      height: auto;
     }
 
     .poema {
-      text-align: center;
+      text-align: justify; /* Alinhamento justificado para o poema por extenso */
       font-style: italic;
     }
   </style>
@@ -28,9 +35,9 @@
     <h1>Homenagem aos 10 Meses de Namoro</h1>
     <p>Fotos e poemas a seguir:</p>
 
-    <!-- Poema 1 -->
+    <!-- Poema 1 com a foto -->
     <div>
-      <img src="Foto 1.jpg" alt="Foto 1" class="imagem-centro">
+      <img src="Foto 1.jpg" alt="Foto 1" class="imagem-pequena imagem-centro">
     </div>
     <div class="poema">
       <h2>Poema 1</h2>
@@ -62,9 +69,9 @@
       </p>
     </div>
 
-    <!-- Poema 2 -->
+    <!-- Poema 2 com a foto -->
     <div>
-      <img src="Foto2.jpg" alt="Foto 2" class="imagem-centro">
+      <img src="Foto2.jpg" alt="Foto 2" class="imagem-pequena imagem-centro">
     </div>
     <div class="poema">
       <h2>Poema 2</h2>
@@ -78,17 +85,18 @@
         Eu já me entreguei Por inteiro pra Você, desculpa Parecer espontåneo, te deixando confusa, Sem entender
         quể está a acontecer
         Mas eu não podia esperar mais pra te dizer o quanto eu admiro você, e seu jeitinho meigo de ser."
+
       </p>
     </div>
 
-    <!-- Poema 3 -->
+    <!-- Poema 3 com a foto -->
     <div>
-      <img src="Foto3.jpg" alt="Foto 3" class="imagem-centro">
+      <img src="Foto3.jpg" alt="Foto 3" class="imagem-pequena imagem-centro">
     </div>
     <div class="poema">
       <h2>Poema 3</h2>
       <p>
-        "eu desejo todas as horas do seu dia.
+   Eu desejo todas as horas do seu dia.
 cada minuto do seu tempo.
 eu desejo cada sorriso,
 cada lagrima,
@@ -129,4 +137,4 @@ me deseje.
     </div>
   </div>
 </body>
-</html>
+</html>.
