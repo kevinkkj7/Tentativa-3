@@ -139,13 +139,40 @@
        e o meu mais belo amanhecer... que um dia pôde acontecer!  
     </p>
 
-    <!-- Relógio Congelado -->
+    <!-- Relógio de Tempo de Namoro -->
     <div class="timer">
-        <p><strong>Tempo total:</strong></p>
-        <p>⏳ 1 mês, 23 dias, 11 horas, 46 minutos e 0 segundos ⏳</p>
-        <p><strong>Término:</strong> 31/01 às 03:28</p>
+        <p><strong>Tempo de Namoro:</strong></p>
+        <p id="time"></p>
+        <p><strong>Data de início:</strong> 08/12/2024 às 15:28</p>
     </div>
 
     <div class="heart">💜</div>
+
+    <script>
+        // Definindo a data de início (8 de dezembro de 2024, 15:28)
+        const startDate = new Date('2024-12-08T15:28:00').getTime();
+
+        // Função para atualizar o contador de tempo
+        function updateTimer() {
+            let now = new Date().getTime();
+            let difference = now - startDate; // Diferença em milissegundos
+
+            // Calculando meses, dias, horas, minutos e segundos
+            let months = Math.floor(difference / (1000 * 60 * 60 * 24 * 30));
+            let days = Math.floor((difference % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            // Atualizando o display do tempo
+            document.getElementById('time').innerHTML = `⏳ ${months} meses, ${days} dias, ${hours} horas, ${minutes} minutos e ${seconds} segundos ⏳`;
+        }
+
+        // Atualizar o tempo a cada segundo
+        setInterval(updateTimer, 1000);
+
+        // Inicializar o timer imediatamente
+        updateTimer();
+    </script>
 </body>
 </html>
